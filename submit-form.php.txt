@@ -1,0 +1,24 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+  // Retrieve other form fields...
+
+  $to = "cec@pikwakanagan.ca";
+  $subject = "New Energy Audit Submission";
+  $message = "Name: $name\nEmail: $email\nPhone: $phone\n...";
+
+  // Set email headers
+  $headers = "From: $email\r\n";
+  $headers .= "Reply-To: $email\r\n";
+  $headers .= "X-Mailer: PHP/" . phpversion();
+
+  // Send the email
+  if (mail($to, $subject, $message, $headers)) {
+    echo "Thank you for your submission!";
+  } else {
+    echo "Oops! Something went wrong. Please try again later.";
+  }
+}
+?>
