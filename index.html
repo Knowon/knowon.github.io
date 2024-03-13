@@ -1,118 +1,180 @@
-﻿<section id="signup">
-    <h2>Sign Up for an Energy Audit</h2>
-    <p>Please fill out the form below to request an energy audit for your home:</p>
-    <form>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="phone">Cell Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
-        </div>
-        <div>
-            <label for="seniors">Are there seniors living there?</label>
-            <input type="checkbox" id="seniors" name="seniors">
-        </div>
-        <div>
-            <label for="income">Low Income:</label>
-            <select id="income" name="income" required>
-                <option value="">Select income bracket</option>
-                <option value="below15">Below $15,000</option>
-                <option value="15to30">$15,000 - $30,000</option>
-                <option value="30to45">$30,000 - $45,000</option>
-                <option value="45to60">$45,000 - $60,000</option>
-                <option value="60to75">$60,000 - $75,000</option>
-                <option value="above75">Above $75,000</option>
-            </select>
-        </div>
-        <div>
-            <label for="adults">Number of Adults:</label>
-            <input type="number" id="adults" name="adults" min="0" required>
-        </div>
-        <div>
-            <label for="children">Number of Children:</label>
-            <input type="number" id="children" name="children" min="0" required>
-        </div>
-        <div>
-            <label for="ownership">Type of Building Ownership:</label>
-            <select id="ownership" name="ownership" required>
-                <option value="">Select ownership type</option>
-                <option value="owned">Owned</option>
-                <option value="tenant">Tenant</option>
-            </select>
-        </div>
-        <div>
-            <label for="year">Year Built:</label>
-            <input type="number" id="year" name="year" min="1900" max="2023" required>
-        </div>
-        <div>
-            <label for="condition">Condition of the House:</label>
-            <select id="condition" name="condition" required>
-                <option value="">Select house condition</option>
-                <option value="new">Like New</option>
-                <option value="good">Good</option>
-                <option value="fair">Fair</option>
-                <option value="poor">Poor</option>
-            </select>
-        </div>
-        <div>
-            <label for="repairs">Immediate Repairs:</label>
-            <textarea id="repairs" name="repairs" rows="3"></textarea>
-        </div>
-        <div>
-            <label for="provider">Heating and Cooling Provider:</label>
-            <input type="text" id="provider" name="provider" required>
-        </div>
-        <div>
-            <label for="primary-heating">Primary Heating Source:</label>
-            <select id="primary-heating" name="primary-heating" required>
-                <option value="">Select primary heating source</option>
-                <option value="propane">Propane</option>
-                <option value="oil">Oil</option>
-                <option value="electricity">Electricity</option>
-                <option value="wood">Wood</option>
-            </select>
-        </div>
-        <div>
-            <label for="secondary-heating">Secondary Heating Source (if any):</label>
-            <select id="secondary-heating" name="secondary-heating">
-                <option value="">Select secondary heating source</option>
-                <option value="wood">Wood</option>
-                <option value="oil">Oil</option>
-                <option value="electricity">Electricity</option>
-                <option value="propane">Propane</option>
-            </select>
-        </div>
-        <div>
-            <label for="water-heating">Water Heating Source:</label>
-            <select id="water-heating" name="water-heating" required>
-                <option value="">Select water heating source</option>
-                <option value="electric">Electric</option>
-                <option value="propane">Propane</option>
-                <option value="heatpump">Heat Pump</option>
-                <option value="oil">Oil</option>
-            </select>
-        </div>
-        <div>
-            <label for="ventilation">Ventilation Type:</label>
-            <select id="ventilation" name="ventilation" required>
-                <option value="">Select ventilation type</option>
-                <option value="hrv">HRV</option>
-                <option value="bathroom">Bathroom Ceiling Fan</option>
-                <option value="kitchen">Kitchen Rangehood</option>
-            </select>
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-        </div>
-    </form>
-</section>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikwakanagan Energy Audit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#milestones">Milestones</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Pikwakanagan Energy Audit</h1>
+            <p>We provide energy audits for homes in the Pikwakanagan community.</p>
+            <a href="#signup" class="cta-button">Sign Up Now</a>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Our mission is to help Pikwakanagan residents save energy and reduce their utility bills through comprehensive energy audits.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Home Energy Assessment</li>
+                <li>Insulation Inspection</li>
+                <li>Appliance Efficiency Check</li>
+                <li>Personalized Recommendations</li>
+            </ul>
+        </section>
+
+        <section id="signup">
+            <h2>Sign Up for an Energy Audit</h2>
+            <p>Please fill out the form below to request an energy audit for your home:</p>
+            <form>
+                <!-- Add the sign-up form fields here -->
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Cell Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div>
+                    <label for="seniors">Are there seniors living there?</label>
+                    <input type="checkbox" id="seniors" name="seniors">
+                </div>
+                <div>
+                    <label for="income">Low Income:</label>
+                    <select id="income" name="income" required>
+                        <option value="">Select income bracket</option>
+                        <option value="below15">Below $15,000</option>
+                        <option value="15to30">$15,000 - $30,000</option>
+                        <option value="30to45">$30,000 - $45,000</option>
+                        <option value="45to60">$45,000 - $60,000</option>
+                        <option value="60to75">$60,000 - $75,000</option>
+                        <option value="above75">Above $75,000</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="adults">Number of Adults:</label>
+                    <input type="number" id="adults" name="adults" min="0" required>
+                </div>
+                <div>
+                    <label for="children">Number of Children:</label>
+                    <input type="number" id="children" name="children" min="0" required>
+                </div>
+                <div>
+                    <label for="ownership">Type of Building Ownership:</label>
+                    <select id="ownership" name="ownership" required>
+                        <option value="">Select ownership type</option>
+                        <option value="owned">Owned</option>
+                        <option value="tenant">Tenant</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="year">Year Built:</label>
+                    <input type="number" id="year" name="year" min="1900" max="2023" required>
+                </div>
+                <div>
+                    <label for="condition">Condition of the House:</label>
+                    <select id="condition" name="condition" required>
+                        <option value="">Select house condition</option>
+                        <option value="new">Like New</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="repairs">Immediate Repairs:</label>
+                    <textarea id="repairs" name="repairs" rows="3"></textarea>
+                </div>
+                <div>
+                    <label for="provider">Heating and Cooling Provider:</label>
+                    <input type="text" id="provider" name="provider" required>
+                </div>
+                <div>
+                    <label for="primary-heating">Primary Heating Source:</label>
+                    <select id="primary-heating" name="primary-heating" required>
+                        <option value="">Select primary heating source</option>
+                        <option value="propane">Propane</option>
+                        <option value="oil">Oil</option>
+                        <option value="electricity">Electricity</option>
+                        <option value="wood">Wood</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="secondary-heating">Secondary Heating Source (if any):</label>
+                    <select id="secondary-heating" name="secondary-heating">
+                        <option value="">Select secondary heating source</option>
+                        <option value="wood">Wood</option>
+                        <option value="oil">Oil</option>
+                        <option value="electricity">Electricity</option>
+                        <option value="propane">Propane</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="water-heating">Water Heating Source:</label>
+                    <select id="water-heating" name="water-heating" required>
+                        <option value="">Select water heating source</option>
+                        <option value="electric">Electric</option>
+                        <option value="propane">Propane</option>
+                        <option value="heatpump">Heat Pump</option>
+                        <option value="oil">Oil</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ventilation">Ventilation Type:</label>
+                    <select id="ventilation" name="ventilation" required>
+                        <option value="">Select ventilation type</option>
+                        <option value="hrv">HRV</option>
+                        <option value="bathroom">Bathroom Ceiling Fan</option>
+                        <option value="kitchen">Kitchen Rangehood</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="milestones">
+            <h2>Milestones</h2>
+            <p>Number of houses audited so far: <span id="houses-audited">0</span></p>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <!-- Add your FAQ content here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pikwakanagan Energy Audit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
